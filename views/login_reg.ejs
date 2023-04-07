@@ -4,7 +4,10 @@
         <meta name="viewpoint" content=""width=device-width, initial-scale="1.0">
         <title>Campus Connect | <%= title %></title>
         <link rel="stylesheet" href="../styles.css">
-        <script src="../public/reg.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+
+        <script src="../reg.js"></script>
 
     </head>
     <body>
@@ -24,7 +27,7 @@
     <input type="text" name="email" placeholder="Email" />
     <input type="password" name="pass" placeholder="Password" />
     <input type="password" name="cpass" placeholder="Confirm Password" />
-    <input type="button" name="next" class="next action-button" value="Next" />
+    <button name="next" type="button" class="next action-button">Next</button>
   </fieldset>
   <fieldset>
     <h2 class="fs-title">Social Profiles</h2>
