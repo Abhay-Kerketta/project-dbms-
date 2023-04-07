@@ -1,0 +1,110 @@
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content=""width=device-width, initial-scale="1.0">
+        <title>Campus Connect | <%= title %></title>
+        <link rel="stylesheet" href="../styles.css">
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+          integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+          crossorigin="anonymous"
+        />
+        <style>
+           
+        </style>
+    </head>
+    <body>
+
+        <div class="navbar">
+            <div class="navbar_left">
+                <a href="/"><img class="navbar_logo" src="../assets/Campus Connect 2.png" alt="logo" /></a>
+            </div>
+        
+            <div class="navbar_center">
+              <a class="active_icon" href="#">
+                <i class="fas fa-<%=group%>"></i>
+              </a>
+            </div>
+        
+            <div class="navbar_right">
+              <div class="navbar_right_profile">
+                <img src="../assets/profile.png" alt="profile" />
+                <span>Ogeday</span>
+              </div>
+            
+            </div>
+            </div>
+        
+        <div class="content">
+            <div class="content_left">
+                <ul>
+                    <li>
+                        <a href="/">
+                            <i class="fa fa-home"></i>
+                            <span>Home</span>
+                          </a>
+                       
+                        </a>
+                      </li>
+
+                  <div class="border"></div>
+            
+                  
+                </ul>
+              </div>
+              <div class="content_center">
+                <div class="media_container">
+                    <div class="share">
+                      <div class="share_upSide">
+                      
+                      </div> <div class="share_upSide">
+                        
+                      </div>
+                      <hr />
+                   
+                    </div>
+                        <% detail.forEach(post => { %>
+                    <div class="news_feed" onclick="location.href=`/getpostdetail/<%=post.postid%>`;" style="cursor: pointer;">
+                      
+                        <div class="news_feed_title">
+                          <img src="../assets/user.png" alt="user" />
+            
+                          <div class="news_feed_title_content">
+                            <p><%=post.author%></p>
+                            <% if(post.typepost === "Music"){%>
+                                <span><%=post.typepost%> <i class="fas fa-music"></i></span>
+                            <%}%>
+                            <% if(post.typepost === "Sports"){%>
+                                <span><%=post.typepost%> <i class="fa fa-trophy" aria-hidden="true"></i></span>
+                            <%}%>
+                          </div>
+                        </div>
+            
+                        <div class="news_feed_description">
+                          <p class="news_feed_subtitle">
+                            <%=post.title%>
+                          </p>
+                          <img src="assets/sunflower.jpg" alt="sunflower" />
+                          <div class="news_feed_description_title">
+                            <p>
+                              <%=post.message%>
+                            </p>
+                          </div>
+                        </div>    
+                       
+              </div>
+              <%})%>
+            </div>
+            </div>
+            <div class="content_right">
+                <div class="content_right_inner">
+                  <div class="your_pages">
+                  </div>
+                 
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>

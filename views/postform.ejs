@@ -1,0 +1,48 @@
+<html lang ="en">
+<%- include('./partials/head.ejs')%>
+    <body>
+        <%-include('./partials/nav.ejs') %>
+         
+        <div class="content">
+            <div class="content_left">
+                <ul>
+                    <li>
+                        <a href="/">
+                            <i class="fa fa-home"></i>
+                            <span>Home</span>
+                          </a>
+                       
+                        </a>
+                      </li>
+
+                  <div class="border"></div>
+            
+                  
+                </ul>
+              </div>
+        <div class="center-custom">
+            <div class="container">
+              <div class="wrapper">
+                <section class="post">
+                  <header>Create Post</header>
+                  <form action="/createpost", method="POST">
+                    <input placeholder="Title" spellcheck="false" name="title" required>
+                    <textarea placeholder="Message ?" spellcheck="false" required name="message"></textarea>
+                    <div class="options">
+                      <p>Flair your post</p>
+                      <ul class="list">
+                        <label class="fas fa-music"></label>
+                        <input type="radio" id="music" name="posttype" value="Music">
+                        <label class="fa fa-trophy"></label>
+                        <input type="radio" id="sports" name="posttype" value="Sports">
+                      </ul>
+                    </div>
+                    <button type="submit">Post</button>
+                  </form>
+                </section>
+              </div>
+            </div>
+            </div>
+        
+    </body>
+</html>
